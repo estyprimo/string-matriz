@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char vogais[100], palavra[100], consoantes[100];
+    int v = 0, c = 0, i = 0;
+
+        scanf("%s", palavra);
+    for(i = 0; palavra[i]!='\0'; i++){
+        
+        if(palavra[i] == 'a'|| palavra[i] == 'e'|| palavra[i] == 'i'|| palavra[i] == 'o'|| palavra[i] == 'u'){
+            vogais[v] = palavra[i];
+                v++;
+        }else{
+            consoantes[c] = palavra[i];
+                c++;
+        } 
+    }
+        vogais[v] = '\0';
+        consoantes[c] = '\0';
+
+        printf("Vogais: %s\nConsoantes: %s", vogais, consoantes);
+
+    return 0;
+}
