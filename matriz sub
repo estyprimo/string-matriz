@@ -1,0 +1,33 @@
+#include<stdio.h> // substitui numeros negativos por 0
+
+int main(){
+    int c, l, i , j;
+
+    scanf("%d %d", &l, &c);
+
+    int m[l][c];
+
+    for(i = 0; i < l; i++){
+        for(j = 0; j < c; j++){
+            scanf("%d", &m[i][j]);
+        }
+    }
+
+    for(i = 0; i < l; i++){
+        for(j = 0; j < c; j++){
+            if(m[i][j] < 0){
+                m[i][j] = 0;
+            }
+        }
+    }
+
+    for(i = 0; i < l; i++){
+        for(j = 0; j < c; j++){
+            printf("%d\t", m[i][j]);
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
